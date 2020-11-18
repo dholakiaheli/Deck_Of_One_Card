@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Tlr-FZ-4eY">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Card View Controller-->
+        <scene sceneID="eGo-cq-9bb">
+            <objects>
+                <viewController id="Tlr-FZ-4eY" customClass="CardViewController" customModule="DeckOfOneCard" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hAj-uB-1hL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="lhe-wG-fLW">
+                                <rect key="frame" x="20.5" y="517.5" width="373" height="52"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tzM-fc-4RF">
+                                        <rect key="frame" x="0.0" y="0.0" width="373" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aJf-Tl-8G2">
+                                        <rect key="frame" x="0.0" y="31.5" width="373" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mlc-VO-e82">
+                                <rect key="frame" x="62" y="172" width="290" height="290"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="mlc-VO-e82" secondAttribute="height" multiplier="1:1" id="WPJ-Db-Eev"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Br-9i-98v">
+                                <rect key="frame" x="145" y="659" width="124" height="41"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <state key="normal" title="Draw">
+                                    <color key="titleColor" systemColor="systemRedColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="drawButtonTapped:" destination="Tlr-FZ-4eY" eventType="touchUpInside" id="6aY-93-tfE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="wEn-rp-cMo"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="lhe-wG-fLW" firstAttribute="centerY" secondItem="wEn-rp-cMo" secondAttribute="centerY" multiplier="1.2" id="5qh-nx-Cih"/>
+                            <constraint firstItem="mlc-VO-e82" firstAttribute="width" secondItem="wEn-rp-cMo" secondAttribute="width" multiplier="0.7" id="Qeo-rP-9PY"/>
+                            <constraint firstItem="2Br-9i-98v" firstAttribute="centerX" secondItem="wEn-rp-cMo" secondAttribute="centerX" id="Qih-1J-eac"/>
+                            <constraint firstItem="2Br-9i-98v" firstAttribute="centerY" secondItem="wEn-rp-cMo" secondAttribute="centerY" multiplier="1.5" id="Uxo-CQ-R8s"/>
+                            <constraint firstItem="2Br-9i-98v" firstAttribute="width" secondItem="wEn-rp-cMo" secondAttribute="width" multiplier="0.3" id="Vkt-Ys-HMP"/>
+                            <constraint firstItem="mlc-VO-e82" firstAttribute="centerY" secondItem="wEn-rp-cMo" secondAttribute="centerY" multiplier="0.7" id="Vtu-R9-d9B"/>
+                            <constraint firstItem="mlc-VO-e82" firstAttribute="centerX" secondItem="wEn-rp-cMo" secondAttribute="centerX" id="W6p-8V-2jD"/>
+                            <constraint firstItem="lhe-wG-fLW" firstAttribute="centerX" secondItem="wEn-rp-cMo" secondAttribute="centerX" id="edF-EC-e7b"/>
+                            <constraint firstItem="lhe-wG-fLW" firstAttribute="width" secondItem="wEn-rp-cMo" secondAttribute="width" multiplier="0.9" id="oQe-0B-DEU"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cardImageView" destination="mlc-VO-e82" id="ClT-OP-fg2"/>
+                        <outlet property="suitLabel" destination="aJf-Tl-8G2" id="3UV-T4-qve"/>
+                        <outlet property="vauleLabel" destination="tzM-fc-4RF" id="Ga9-jB-t3o"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tc7-pj-QEx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="242.0289855072464" y="-310.04464285714283"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
